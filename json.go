@@ -1,4 +1,4 @@
-package null
+package nill
 
 func (n *Type[T]) UnmarshalJSON(data []byte) error {
 	if string(data) == "null" {

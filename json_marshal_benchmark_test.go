@@ -1,4 +1,4 @@
-package null
+package nill
 
 import (
 	goJson "github.com/goccy/go-json"

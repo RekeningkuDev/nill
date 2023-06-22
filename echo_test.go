@@ -1,4 +1,4 @@
-package null
+package nill
 
 import (
 	"github.com/labstack/echo/v4"

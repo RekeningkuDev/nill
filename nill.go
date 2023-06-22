@@ -1,4 +1,4 @@
-package null
+package nill
 
 type Type[T comparable] struct {
 	Valid bool

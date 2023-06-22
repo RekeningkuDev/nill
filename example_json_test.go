@@ -1,4 +1,4 @@
-package null_test
+package nill_test
 
 import (
 	"encoding/json"
