@@ -3,24 +3,24 @@ package nill_test
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/RekeningkuDev/null"
+	"github.com/RekeningkuDev/nill"
 	"log"
 )
 
 func ExampleTypeMarshal() {
 	type BarTest struct {
-		Text null.Type[string] `json:"text"`
+		Text nill.Type[string] `json:"text"`
 	}
 
 	type FooTest struct {
-		Bar null.Type[BarTest] `json:"bar"`
+		Bar nill.Type[BarTest] `json:"bar"`
 	}
 
 	foo := FooTest{
-		Bar: null.Type[BarTest]{
+		Bar: nill.Type[BarTest]{
 			Valid: true,
 			Value: BarTest{
-				Text: null.Type[string]{
+				Text: nill.Type[string]{
 					Valid: true,
 					Value: "test",
 				},
