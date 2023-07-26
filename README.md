@@ -1,6 +1,6 @@
 # nill
 
-[![Github Actions](https://github.com/RekeningkuDev/nill/actions/workflows/ci.yml/badge.svg)](https://github.com/RekeningkuDev/nill/actions/workflows/ci.yml)
+[![Github Actions](https://github.com/RekeningkuDev/nill/actions/workflows/ci.yaml/badge.svg)](https://github.com/RekeningkuDev/nill/actions/workflows/ci.yaml)
 [![GoDoc](https://godoc.org/github.com/RekeningkuDev/nill?status.svg)](https://godoc.org/github.com/RekeningkuDev/nill)
 [![Go Report Card](https://goreportcard.com/badge/github.com/RekeningkuDev/nill)](https://goreportcard.com/report/github.com/RekeningkuDev/nill)
 
