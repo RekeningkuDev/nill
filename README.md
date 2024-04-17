@@ -4,7 +4,7 @@
 [![GoDoc](https://godoc.org/github.com/RekeningkuDev/nill?status.svg)](https://godoc.org/github.com/RekeningkuDev/nill)
 [![Go Report Card](https://goreportcard.com/badge/github.com/RekeningkuDev/nill)](https://goreportcard.com/report/github.com/RekeningkuDev/nill)
 
-Deprecated and sudah ada di package bawaan golang sejak versi 1.22.2 https://pkg.go.dev/database/sql#Null
+Deprecated and has been in the default Golang package since version 1.22.2 https://pkg.go.dev/database/sql#Null
 
 ## Features
 * Support for echo (web framework) https://echo.labstack.com/
