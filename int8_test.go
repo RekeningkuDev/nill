@@ -1,45 +1,46 @@
 package nill
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestInt8(t *testing.T) {
 	t.Run("add", func(t *testing.T) {
 		value := NewInt8(1)
 		value.Add(1)
-		assert.Equal(t, Int8{Valid: true, Value: 2}, value)
+		assert.Equal(t, Int8{Valid: true, V: 2}, value)
 	})
 	t.Run("sub", func(t *testing.T) {
 		value := NewInt8(1)
 		value.Sub(1)
-		assert.Equal(t, Int8{Valid: true, Value: 0}, value)
+		assert.Equal(t, Int8{Valid: true, V: 0}, value)
 	})
 	t.Run("mul", func(t *testing.T) {
 		value := NewInt8(3)
 		value.Mul(5)
-		assert.Equal(t, Int8{Valid: true, Value: 15}, value)
+		assert.Equal(t, Int8{Valid: true, V: 15}, value)
 	})
 	t.Run("div", func(t *testing.T) {
 		value := NewInt8(10)
 		value.Div(5)
-		assert.Equal(t, Int8{Valid: true, Value: 2}, value)
+		assert.Equal(t, Int8{Valid: true, V: 2}, value)
 	})
 	t.Run("mod", func(t *testing.T) {
 		value := NewInt8(1)
 		value.Mod(5)
-		assert.Equal(t, Int8{Valid: true, Value: 1}, value)
+		assert.Equal(t, Int8{Valid: true, V: 1}, value)
 	})
 	t.Run("inc", func(t *testing.T) {
 		value := NewInt8(1)
 		value.Inc()
-		assert.Equal(t, Int8{Valid: true, Value: 2}, value)
+		assert.Equal(t, Int8{Valid: true, V: 2}, value)
 	})
 	t.Run("dec", func(t *testing.T) {
 		value := NewInt8(1)
 		value.Dec()
-		assert.Equal(t, Int8{Valid: true, Value: 0}, value)
+		assert.Equal(t, Int8{Valid: true, V: 0}, value)
 	})
 	t.Run("zero", func(t *testing.T) {
 		value := NewInt8(0)

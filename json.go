@@ -11,7 +11,7 @@ func (n *Type[T]) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	n.Value = value
+	n.V = value
 	n.Valid = true
 	return nil
 }
@@ -21,5 +21,5 @@ func (n Type[T]) MarshalJSON() ([]byte, error) {
 		return JSONMarshal(nil)
 	}
 
-	return JSONMarshal(n.Value)
+	return JSONMarshal(n.V)
 }

@@ -2,8 +2,9 @@ package nill
 
 import (
 	"encoding/json"
-	goJson "github.com/goccy/go-json"
 	"testing"
+
+	goJson "github.com/goccy/go-json"
 )
 
 type BarBenchmarkNestedMarshal struct {
@@ -21,10 +22,10 @@ func BenchmarkNestedMarshal(b *testing.B) {
 		foo := FooBenchmarkNestedMarshal{
 			Bar: Type[BarBenchmarkNestedMarshal]{
 				Valid: true,
-				Value: BarBenchmarkNestedMarshal{
+				V: BarBenchmarkNestedMarshal{
 					Text: Type[string]{
 						Valid: true,
-						Value: "test",
+						V:     "test",
 					},
 				},
 			},
@@ -69,10 +70,10 @@ func BenchmarkNestedMarshal_GoJson(b *testing.B) {
 		foo := FooBenchmarkNestedMarshal{
 			Bar: Type[BarBenchmarkNestedMarshal]{
 				Valid: true,
-				Value: BarBenchmarkNestedMarshal{
+				V: BarBenchmarkNestedMarshal{
 					Text: Type[string]{
 						Valid: true,
-						Value: "test",
+						V:     "test",
 					},
 				},
 			},

@@ -1,10 +1,9 @@
 package nill
 
-type Type[T any] struct {
-	Valid bool
-	Value T
-}
+import "database/sql"
 
-func New[T any](value T) Type[T] {
-	return Type[T]{Valid: true, Value: value}
+type Type[T any] sql.Null[T]
+
+func New[T any](v T) Type[T] {
+	return Type[T]{Valid: true, V: v}
 }

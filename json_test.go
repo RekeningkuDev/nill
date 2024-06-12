@@ -2,8 +2,9 @@ package nill
 
 import (
 	"encoding/json"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 type BarTest struct {
@@ -23,8 +24,8 @@ func TestType_UnmarshalJSON(t *testing.T) {
 		}
 
 		assert.True(t, foo.Bar.Valid)
-		assert.True(t, foo.Bar.Value.Text.Valid)
-		assert.Equal(t, foo.Bar.Value.Text.Value, "test")
+		assert.True(t, foo.Bar.V.Text.Valid)
+		assert.Equal(t, foo.Bar.V.Text.V, "test")
 	})
 
 	t.Run("should unmarshal json Baz with null value", func(t *testing.T) {
@@ -36,8 +37,8 @@ func TestType_UnmarshalJSON(t *testing.T) {
 		}
 
 		assert.True(t, foo.Bar.Valid)
-		assert.False(t, foo.Bar.Value.Text.Valid)
-		assert.Equal(t, foo.Bar.Value.Text.Value, "")
+		assert.False(t, foo.Bar.V.Text.Valid)
+		assert.Equal(t, foo.Bar.V.Text.V, "")
 	})
 
 	t.Run("should unmarshal json BarTest with empty value", func(t *testing.T) {
@@ -49,8 +50,8 @@ func TestType_UnmarshalJSON(t *testing.T) {
 		}
 
 		assert.True(t, foo.Bar.Valid)
-		assert.False(t, foo.Bar.Value.Text.Valid)
-		assert.Equal(t, foo.Bar.Value.Text.Value, "")
+		assert.False(t, foo.Bar.V.Text.Valid)
+		assert.Equal(t, foo.Bar.V.Text.V, "")
 	})
 
 	t.Run("should unmarshal json with empty value", func(t *testing.T) {
@@ -62,8 +63,8 @@ func TestType_UnmarshalJSON(t *testing.T) {
 		}
 
 		assert.False(t, foo.Bar.Valid)
-		assert.False(t, foo.Bar.Value.Text.Valid)
-		assert.Equal(t, foo.Bar.Value.Text.Value, "")
+		assert.False(t, foo.Bar.V.Text.Valid)
+		assert.Equal(t, foo.Bar.V.Text.V, "")
 	})
 }
 
@@ -72,10 +73,10 @@ func TestType_MarshalJSON(t *testing.T) {
 		foo := FooTest{
 			Bar: Type[BarTest]{
 				Valid: true,
-				Value: BarTest{
+				V: BarTest{
 					Text: Type[string]{
 						Valid: true,
-						Value: "test",
+						V:     "test",
 					},
 				},
 			},
@@ -93,10 +94,10 @@ func TestType_MarshalJSON(t *testing.T) {
 		foo := FooTest{
 			Bar: Type[BarTest]{
 				Valid: true,
-				Value: BarTest{
+				V: BarTest{
 					Text: Type[string]{
 						Valid: false,
-						Value: "",
+						V:     "",
 					},
 				},
 			},

@@ -5,112 +5,112 @@ type Int32 Type[int32]
 
 // NewInt32 creates a new Int32.
 func NewInt32(value int32) Int32 {
-	return Int32{Valid: true, Value: value}
+	return Int32{Valid: true, V: value}
 }
 
 // Add adds value to Int32.
 func (v *Int32) Add(value int32) {
-	v.Value += value
+	v.V += value
 }
 
 // Sub subtracts value from Int32.
 func (v *Int32) Sub(value int32) {
-	v.Value -= value
+	v.V -= value
 }
 
 // Mul multiplies Int32 by value.
 func (v *Int32) Mul(value int32) {
-	v.Value *= value
+	v.V *= value
 }
 
 // Div divides Int32 by value.
 func (v *Int32) Div(value int32) {
-	v.Value /= value
+	v.V /= value
 }
 
 // Mod calculates the remainder of Int32 divided by value.
 func (v *Int32) Mod(value int32) {
-	v.Value %= value
+	v.V %= value
 }
 
 // Inc increments Int32 by 1.
 func (v *Int32) Inc() {
-	v.Value++
+	v.V++
 }
 
 // Dec decrements Int32 by 1.
 func (v *Int32) Dec() {
-	v.Value--
+	v.V--
 }
 
 // Zero returns true if Int32 is zero.
 func (v *Int32) Zero() bool {
-	return v.Value == 0
+	return v.V == 0
 }
 
 // Positive returns true if Int32 is positive.
 func (v *Int32) Positive() bool {
-	return v.Value > 0
+	return v.V > 0
 }
 
 // Negative returns true if Int32 is negative.
 func (v *Int32) Negative() bool {
-	return v.Value < 0
+	return v.V < 0
 }
 
 // Even returns true if Int32 is even.
 func (v *Int32) Even() bool {
-	return v.Value%2 == 0
+	return v.V%2 == 0
 }
 
 // Odd returns true if Int32 is odd.
 func (v *Int32) Odd() bool {
-	return v.Value%2 != 0
+	return v.V%2 != 0
 }
 
 // GreaterThan returns true if Int32 is greater than value.
 func (v *Int32) GreaterThan(value int32) bool {
-	return v.Value > value
+	return v.V > value
 }
 
 // GreaterThanOrEqual returns true if Int32 is greater than or equal to value.
 func (v *Int32) GreaterThanOrEqual(value int32) bool {
-	return v.Value >= value
+	return v.V >= value
 }
 
 // LessThan returns true if Int32 is less than value.
 func (v *Int32) LessThan(value int32) bool {
-	return v.Value < value
+	return v.V < value
 }
 
 // LessThanOrEqual returns true if Int32 is less than or equal to value.
 func (v *Int32) LessThanOrEqual(value int32) bool {
-	return v.Value <= value
+	return v.V <= value
 }
 
 // Equal returns true if Int32 is equal to value.
 func (v *Int32) Equal(value int32) bool {
-	return v.Value == value
+	return v.V == value
 }
 
 // NotEqual returns true if Int32 is not equal to value.
 func (v *Int32) NotEqual(value int32) bool {
-	return v.Value != value
+	return v.V != value
 }
 
 // DivisibleBy returns true if Int32 is divisible by value.
 func (v *Int32) DivisibleBy(value int32) bool {
-	return v.Value%value == 0
+	return v.V%value == 0
 }
 
 // Prime returns true if Int32 is a prime number.
 func (v *Int32) Prime() bool {
-	if v.Value <= 1 {
+	if v.V <= 1 {
 		return false
 	}
 
-	for i := int32(2); i < v.Value; i++ {
-		if v.Value%i == 0 {
+	for i := int32(2); i < v.V; i++ {
+		if v.V%i == 0 {
 			return false
 		}
 	}

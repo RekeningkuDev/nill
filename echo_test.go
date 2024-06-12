@@ -1,12 +1,13 @@
 package nill
 
 import (
-	"github.com/labstack/echo/v4"
-	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"
 	"strings"
 	"testing"
+
+	"github.com/labstack/echo/v4"
+	"github.com/stretchr/testify/assert"
 )
 
 type user struct {
@@ -92,9 +93,9 @@ func TestFromJson(t *testing.T) {
 		}
 
 		assert.True(t, u.Name.Valid)
-		assert.Equal(t, "Jon Snow", u.Name.Value)
+		assert.Equal(t, "Jon Snow", u.Name.V)
 		assert.True(t, u.Email.Valid)
-		assert.Equal(t, "jon@labstack.com", u.Email.Value)
+		assert.Equal(t, "jon@labstack.com", u.Email.V)
 	})
 
 	t.Run("one of the value is null", func(t *testing.T) {
@@ -110,9 +111,9 @@ func TestFromJson(t *testing.T) {
 		}
 
 		assert.True(t, u.Name.Valid)
-		assert.Equal(t, "Jon Snow", u.Name.Value)
+		assert.Equal(t, "Jon Snow", u.Name.V)
 		assert.False(t, u.Email.Valid)
-		assert.Equal(t, "", u.Email.Value)
+		assert.Equal(t, "", u.Email.V)
 	})
 
 	t.Run("one of the value is empty", func(t *testing.T) {
@@ -128,9 +129,9 @@ func TestFromJson(t *testing.T) {
 		}
 
 		assert.True(t, u.Name.Valid)
-		assert.Equal(t, "Jon Snow", u.Name.Value)
+		assert.Equal(t, "Jon Snow", u.Name.V)
 		assert.True(t, u.Email.Valid)
-		assert.Equal(t, "", u.Email.Value)
+		assert.Equal(t, "", u.Email.V)
 	})
 
 	t.Run("only has one value", func(t *testing.T) {
@@ -146,9 +147,9 @@ func TestFromJson(t *testing.T) {
 		}
 
 		assert.True(t, u.Name.Valid)
-		assert.Equal(t, "Jon Snow", u.Name.Value)
+		assert.Equal(t, "Jon Snow", u.Name.V)
 		assert.False(t, u.Email.Valid)
-		assert.Equal(t, "", u.Email.Value)
+		assert.Equal(t, "", u.Email.V)
 	})
 }
 

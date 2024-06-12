@@ -1,9 +1,10 @@
 package nill
 
 import (
+	"testing"
+
 	goJson "github.com/goccy/go-json"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 type BarBenchmarkMarshal struct {
@@ -15,7 +16,7 @@ func BenchmarkMarshal(b *testing.B) {
 		foo := BarBenchmarkMarshal{
 			Text: Type[string]{
 				Valid: true,
-				Value: "test",
+				V:     "test",
 			},
 		}
 
@@ -58,7 +59,7 @@ func BenchmarkMarshal_GoJson(b *testing.B) {
 		foo := BarBenchmarkMarshal{
 			Text: Type[string]{
 				Valid: true,
-				Value: "test",
+				V:     "test",
 			},
 		}
 
