@@ -26,18 +26,18 @@ func TestScan(t *testing.T) {
 }
 
 func TestValue(t *testing.T) {
-	foo := Type[int]{Valid: true, V: 1}
+	foo := Type[int64]{Valid: true, V: 1}
 	v, err := foo.Value()
 	if err != nil {
 		t.Error("error should be nil")
 	}
 
-	vInt, ok := v.(int)
+	vInt, ok := v.(int64)
 	if !ok {
-		t.Error("should be 1")
+		t.Errorf("value should be int64, got %T", v)
 	}
 
 	if vInt != 1 {
-		t.Error("should be 1")
+		t.Errorf("value should be 1, got %d", vInt)
 	}
 }

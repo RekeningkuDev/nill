@@ -15,6 +15,7 @@ func ExampleType() {
 
 	type FooTest struct {
 		Bar nill.Type[BarTest] `json:"bar"`
+		Zoo nill.Type[string]  `json:"zoo,omitzero"`
 	}
 
 	foo := FooTest{
@@ -26,6 +27,11 @@ func ExampleType() {
 					V:     "test",
 				},
 			},
+		},
+		Zoo: nill.Type[string]{
+			V: "this should be omitted",
+			// Valid is false, so this field will be omitted in JSON output
+			Valid: false,
 		},
 	}
 
