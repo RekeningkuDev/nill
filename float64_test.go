@@ -42,7 +42,7 @@ func TestFloat64(t *testing.T) {
 		assert.True(t, value.Zero())
 	})
 	t.Run("positive", func(t *testing.T) {
-		value := NewFloat32(1)
+		value := NewFloat64(1)
 		assert.True(t, value.Positive())
 	})
 	t.Run("negative", func(t *testing.T) {
