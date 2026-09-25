@@ -69,7 +69,7 @@ func TestInt(t *testing.T) {
 	})
 	t.Run("greater than equal", func(t *testing.T) {
 		value := NewInt(10)
-		assert.True(t, value.LessThanOrEqual(10))
+		assert.True(t, value.GreaterThanOrEqual(10))
 	})
 	t.Run("less than", func(t *testing.T) {
 		value := NewInt(10)
