@@ -17,7 +17,7 @@ Run `go get github.com/RekeningkuDev/nill`
 
 ## Requirements
 
-nill library requires Go version `>=1.18`
+nill library requires Go version `>=1.20`
 
 ## Usage
 
